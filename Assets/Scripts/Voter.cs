@@ -8,15 +8,19 @@ using System;
 
 public class Voter : MonoBehaviour
 {
-    // Start is called before the first frame update
     public bool charOnCollidier = false;
     public float remainConvincingTime = 1f;
-    public static Action<Voter> Convinced;
+    public static Action<Voter,string> Convinced;
     public string uname = "mert";
-    public int voteNum = 1; 
+    public int voteNum = 1;
+    public string targetString = "";
     void Start()
     {
     
+    }
+    public void Init(System.Action<Voter,string> OnConvinced)
+    {
+        Convinced += OnConvinced;
     }
 
     // Update is called once per frame
@@ -31,7 +35,7 @@ public class Voter : MonoBehaviour
                 {
                     if(Convinced != null)
                     {
-                        Convinced(this); 
+                        Convinced(this,targetString); 
                     }
                 }
                  
@@ -45,13 +49,13 @@ public class Voter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         
-        if(other.tag == "PartyFlag")
+        if(other.gameObject.CompareTag("AttractorTriggerZone"))
         {
-            print("Burasi bayrak");
-        } 
-        if (other.tag == "Character")
+
+        }
+        else if(other.gameObject.CompareTag("PlayerTriggerZone"))
         {
-            charOnCollidier = true;
+
         }
            
         
