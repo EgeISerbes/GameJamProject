@@ -12,6 +12,7 @@ public class VoterManager : MonoBehaviour
     public int minNumVoter = 20;
     public GameObject voterPrefab;
     public static Action<string,int> incrementVote;
+    public ParticleSystem explosionSystem;
     List<GameObject> SpawnZoneList = new List<GameObject>();
     List<Voter> VotersList = new List<Voter>();
     void Start()
@@ -71,8 +72,15 @@ public class VoterManager : MonoBehaviour
 
     void DestroyVoter(Voter voter)
     {
-        
+
+        /*if(explosionSystem != null)
+        {
+            ParticleSystem expSystem = (ParticleSystem)Instantiate(explosionSystem, voter.transform.position, voter.transform.rotation);
+            expSystem.Play(); 
+        } */
+
         VotersList.Remove(voter);
-        Destroy(voter.gameObject); 
+        Destroy(voter.gameObject);
+       
     }
 }

@@ -3,7 +3,9 @@ guid: 1faff2f15979c1344ad02c408c08ab9e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - voterPrefab: {instanceID: 0}
+  - explosionSystem: {fileID: 3453058093722459305, guid: 11de61fc4eb88f64baf40560f32d183a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
