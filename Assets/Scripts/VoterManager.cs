@@ -57,7 +57,7 @@ public class VoterManager : MonoBehaviour
     {
         if (incrementVote != null)
         {
-            incrementVote(voter.uname, voter.voteNum);
+            incrementVote((string)voter.uname, (int)voter.voteNum);
         }
     }
 
