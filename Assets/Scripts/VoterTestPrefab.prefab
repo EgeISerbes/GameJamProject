@@ -102,6 +102,7 @@ MonoBehaviour:
   remainConvincingTime: 1
   uname: mert
   voteNum: 1
+  targetString: 
 --- !u!61 &1809978778098265002
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,4 +164,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1809978778098265003}
   accelerationTime: 2
-  maxSpeed: 5
+  maxSpeed: 100

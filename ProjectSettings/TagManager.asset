@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SpawnZone
   - PartyFlag
+  - GameManager
+  - User
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Road
-  - 
+  - Objects
   - 
   - 
   - 
@@ -40,12 +42,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 1
-  - name: Road
-    uniqueID: 3330053549
-    locked: 0
   - name: Background
     uniqueID: 4125097721
     locked: 1
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Objects
+    uniqueID: 1329730341
+    locked: 0
+  - name: Road
+    uniqueID: 3330053549
+    locked: 0
